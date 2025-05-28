@@ -99,8 +99,6 @@ menu:
     link: '/about'
   - label: 'Concerts'
     link: '/concerts/'
-  - label: 'Songs'
-    link: '/songs/'
   - label: 'Contact'
     link: '/contact/'
 
