@@ -1,5 +1,4 @@
 <dl class='metadata-block'>
-  {% assign stateProvArr = page["state-province"] | split: '; ' %}
   {% for item in include.meta %}
     {% if item.value contains 'page.' %}
       {% assign key = item.value | remove: 'page.' %}
@@ -29,42 +28,10 @@
 
       <!-- program metadata -->
       {% comment %}
-        Treatment for program metadata
+        Treatment for metadata
       {% endcomment %}
-        {% if item.label == 'Location' %}
-            <dt>{{item.label}}</dt>
-            {% assign cityArr = value | split: '; ' %}
-            {% for city in cityArr %}
-              {% assign i = forloop.index | minus: 1 %}
-              <dd>{{city}}, {{stateProvArr[i]}}</dd>
-            {% endfor %}
-        {% elsif item.label == 'Performers' %}
-            <dt>{{ item.label}} </dt>
-            {% assign performersArr = value | split: '; ' %}
-            <dd>{{ performersArr | join: ', ' }}</dd>
+        {% if item.label == 'youtube' %}
         {% elsif item.label == 'Songs' %}
-          <dt>{{ item.label }}</dt>
-          {% assign songArr = value | split: '; ' %}
-          {% for key in songArr %}
-            {% assign song = site.data.songs | where: "pid", key | first %}
-            <dd><a href="{{site.baseurl}}/songs/{{ key | downcase }}">{{song.label}}</a></dd>
-          {% endfor %}
-        <!-- song metadata -->
-        {% comment %}
-          Treatment for song metadata
-        {% endcomment %}
-        {% elsif item.label == "Title" %}
-          <dt>{{item.label}}</dt>
-          <dd>{{ value | strip }} {% if page.ukrainian-title %} / {{page.ukrainian-title}} {% endif %}</dd>
-        {% elsif item.label == 'Theme(s)' %}
-          <dt>{{item.label}}</dt>
-          <dd>{{ value | split: ';' | join: ', '}}</dd>
-        {% elsif item.label == 'Lyrics' %}
-          <dt>{{ item.label}}</dt>
-          <dd>{{ value | strip}}</dd>
-          {% if page.lyrics %}
-            <dd>{{page.lyrics}}</dd>
-          {% endif %}
         {% else %}
           <dt>{{ item.label }}</dt>
           <dd>{{ value | strip }}</dd>

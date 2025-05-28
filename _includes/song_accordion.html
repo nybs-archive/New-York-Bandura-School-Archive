@@ -1,0 +1,31 @@
+<div class="accordion" id="accordionExample">
+    {% assign songArr = include.songs | split: '; ' %}
+    {% for key in songArr %}
+        {% assign song = site.data.songs | where: "pid", key | first %}
+        <div class="card text-center">
+            <div class="card-header" id="heading{{song.number}}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{song.number}}"
+                        aria-expanded="true" aria-controls="collapse{{song.number}}">
+                        {{song.number}}. {{song.title}}
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse{{song.number}}" class="collapse" aria-labelledby="heading{{song.number}}" data-parent="#accordionExample">
+                <div class="card-body">
+                    {% if song.youtube %}
+                    <iframe width="80%" height="220" src="https://www.youtube.com/embed/{{song.youtube}}" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    {% endif %}
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Genre: {{song.genre}}</li>
+                        <li class="list-group-item">Language(s): {{song.language}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class='left-panel'>
+<h3 alt="{{ page.label | escape }}" class='item-label'>{{ page.label }}</h3>
+      {% if page.youtube %}
+        {% assign vidId = page.youtube | split: "=" %}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list={{vidId[-1]}}" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      {% endif %}
+      
+      {% if layout.meta.size %}
+        {% assign metadata = layout.meta %}
+      {% elsif page.meta.size %}
+        {% assign metadata = page.meta %}
+      {% endif %}
+      {% if metadata.size %}
+        {% include item_metadata.html meta=metadata %}
+      {% endif %}
+    
+</div>
+  {% unless layout.pagination == false %}{% include item_pagination.html %}{% endunless %}
+
+<div class="right-panel">
+  {% include song_accordion.html songs=page.songs %}
+</div>
