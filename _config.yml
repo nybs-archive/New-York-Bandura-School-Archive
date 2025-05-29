@@ -109,6 +109,9 @@ menu:
       link: '/concerts/'
     - label: 'Additional Audio'
       link: '/addl-audio/'
+  - label: 'Listen'
+    link: '/listen/'
+  - label: 'Contact'
     link: '/contact/'
 
 # --------------------------------------------------------------
