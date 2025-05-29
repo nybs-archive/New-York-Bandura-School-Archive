@@ -64,6 +64,12 @@ collections:
   songs:
     metadata:
       source: 'songs.csv'
+  addl_audio:
+    output: true
+    layout: 'addl_audio_item'
+    metadata:
+      source: 'addl_audio.csv'
+
 
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
@@ -97,9 +103,12 @@ search:
 menu:
   - label: 'About'
     link: '/about'
-  - label: 'Concerts'
-    link: '/concerts/'
-  - label: 'Contact'
+  - label: 'Audio'
+    sub:
+    - label: 'Concerts'
+      link: '/concerts/'
+    - label: 'Additional Audio'
+      link: '/addl-audio/'
     link: '/contact/'
 
 # --------------------------------------------------------------
