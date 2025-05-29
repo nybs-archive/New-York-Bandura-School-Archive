@@ -10,7 +10,7 @@ title: New York Bandura School Archive
                 <div class="card-body">
                     <h3 class="card-title">History</h3>
                     <p class="card-text text-white">Interested in the History of the School? Click here!</p>
-                    <a href="#" class="btn btn-warning">History</a>
+                    <a href="{{'/history' | absolute_url}}" class="btn btn-warning">History</a>
                 </div>
             </div>
         </div>
