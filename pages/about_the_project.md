@@ -8,7 +8,7 @@ This prototype archive was created by Tasha Hutnick, current NYBS student, as th
 
 For this prototype, the following records were used, both from the collection of Julian Kytasty:
 - CD recording of the 2006 Christmas Concert
-- Cassette tape for one of the lessons in Prudentopolis in 1989 (restoration still in progress)
+- Cassette tape for one of the lessons in Prudentopolis in 1987 (restoration still in progress)
 
 The following records are currently being processed and will be added in later updates:
 - CD recording of 3 Workshops from 1985 - 1987
