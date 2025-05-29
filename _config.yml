@@ -102,7 +102,11 @@ search:
 
 menu:
   - label: 'About'
-    link: '/about'
+    sub:
+      - label: 'History of the School'
+        link: '/history'
+      - label: 'The Project'
+        link: '/about-the-project'
   - label: 'Audio'
     sub:
     - label: 'Concerts'
