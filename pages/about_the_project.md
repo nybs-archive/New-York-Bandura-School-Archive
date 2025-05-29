@@ -22,6 +22,7 @@ For this project, the following software was used:
 - GarageBand
 - Audacity
 - iMovie
+- Minicomp/Wax
 
 Special Thanks to the following:
 - Julian Kytasty
