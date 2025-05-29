@@ -3,6 +3,6 @@ layout: page
 title: Contact Us
 permalink: /contact/
 ---
-### As our team has discovered over the course of this project, the stories of bandura can often only be found within the people from the community. Do you have anything to share that we may have missed? Any questions? 
+### The New York Bandura School has been around for almost 50 years. Do you have any additional information for us? Any memories you'd like to share? And context to add? Any Questions?
 
-### **Email us at womenofbandura@gmail.com**!
+### **Email us at nybsarchive@gmail.com**!
